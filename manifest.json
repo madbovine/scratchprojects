@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Scratch Custom Blocks",
+  "version": "1.0",
+  "description": "Create custom blocks (hat, reporter, cap, boolean, variable) on scratch.mit.edu",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://scratch.mit.edu/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://scratch.mit.edu/projects/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://scratch.mit.edu/*"]
+    }
+  ]
+}
+
